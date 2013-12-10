@@ -1,0 +1,55 @@
+URxvt.scrollBar: off
+URxvt.cursorBlink: true
+
+! clickable links
+URxvt.perl-ext-common:  default,matcher
+URxvt.url-launcher:      firefox
+URxvt.matcher.button:   1
+
+! normal
+! color0    black
+! color1    red
+! color2    green
+! color3    yellow
+! color4    blue
+! color5    purple
+! color6    cyan
+! color7    white
+
+! light
+! color8    black
+! color9    red
+! color10   green
+! color11   yellow
+! color12   blue
+! color13   purple
+! color14   cyan
+! color15   white
+
+URxvt.background:#000000
+URxvt.foreground:#cbcbcb
+!URxvt.color0:#000000 
+!URxvt.color1:#761c1c
+!URxvt.color2:#036a0f
+!URxvt.color3:#a9a00b
+!URxvt.color4:#1234cb
+!URxvt.color5:#67227b
+!URxvt.color6:#0a5e5f
+!URxvt.color7:#9d9d9d
+!URxvt.color8:#2e2e2e
+!URxvt.color9:#e36868
+!URxvt.color10:#6bd266
+!URxvt.color11:#e8e170
+URxvt.color12:#395bf1
+!URxvt.color13:#a76bc9
+!URxvt.color14:#38898c
+!URxvt.color15:#dbdbdb
+URxvt.colorUL:#00e821
+
+URxvt.font: xft:Terminus:size=14
+
+URxvt.transparent: true
+URxvt.tintColor:#222222
+!URxvt.shading: 9.5
+
+URxvt.borderLess: false
