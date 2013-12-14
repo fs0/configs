@@ -42,6 +42,6 @@ set -o vi
 complete -cf sudo
 complete -cf man
 
-export PATH=$PATH:/sbin:/home/fs0/prg/shell-scripts:/home/fs0/prg/prgs:.
+export PATH=.:$PATH:/sbin:/home/fs0/prg/shell-scripts:/home/fs0/prg/prgs
 
 export BROWSER=firefox
