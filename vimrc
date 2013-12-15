@@ -10,6 +10,7 @@ set scrolloff=10
 set autoindent
 set expandtab
 set tabstop=4
+set shiftwidth=4
 set textwidth=1000
 set hlsearch
 set cursorline
