@@ -20,6 +20,8 @@ if has("autocmd")
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 endif
 
+autocmd FileType make setlocal noexpandtab
+
 call pathogen#infect()
 let g:syntastic_c_checkers=['gcc']
 let g:syntastic_cpp_checkers=['gcc']
