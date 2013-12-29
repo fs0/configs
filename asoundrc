@@ -113,7 +113,7 @@ pcm.dmixerOB {
 
 ctl.dmixerOB {
     type hw
-    card DS
+    card PCH
     device 0
 }
 
