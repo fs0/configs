@@ -31,6 +31,7 @@ pcm.!default {
     #slave.pcm "soundcard"
     #slave.pcm "duplex"
     slave.pcm "both"
+    #slave.pcm "plugequal"
     #slave.pcm "onboard"
     #slave.pcm "51to20"
 }
@@ -117,7 +118,14 @@ ctl.dmixerOB {
     device 0
 }
 
+pcm.plugequal {
+    type equal;
+    slave.pcm "plug:both"
+}
 
+ctl.equal {
+    type equal;
+}
 
 pcm.duplex {
     type asym

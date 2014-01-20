@@ -302,7 +302,7 @@ settings = {
     real_name = "fs0";
     user_name = "fs0";
     nick = "seg_fault";
-    resolve_prefer_ipv6 = "yes";
+    resolve_prefer_ipv6 = "no";
   };
   "fe-text" = { actlist_sort = "refnum"; };
   "fe-common/core" = {
