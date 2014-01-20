@@ -35,6 +35,7 @@ alias srm='mv -vi -t /other/trash/'
 alias cp='cp -vi'
 alias mv='mv -vi'
 alias python='python2.7'
+alias mplayerdmix='mplayer -ao alsa:device=both'
 
 set -o vi
 
