@@ -311,19 +311,31 @@ settings = {
   };
 };
 ignores = (
-  { 
+  {
     level = "JOINS PARTS QUITS MODES";
     channels = ( "#xkcd-signal" );
   },
-  { level = "JOINS PARTS QUITS MODES"; channels = ( "#xkcd" ); },
-  { level = "MODES"; channels = ( "&bitlbee" ); },
-  { 
+  {
     level = "JOINS PARTS QUITS MODES";
-    channels = ( "##programming" );
+    channels = ( "#xkcd" );
   },
-  { level = "JOINS PARTS QUITS MODES"; channels = ( "##linux" ); },
-  { level = "JOINS PARTS QUITS MODES"; channels = ( "#gentoo" ); },
-  { 
+  {
+    level = "MODES";
+    channels = ( "&bitlbee" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES";
+    channels = ( "##linux" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES";
+    channels = ( "#archlinux" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES";
+    channels = ( "#haskell" );
+  },
+  {
     level = "JOINS PARTS QUITS MODES";
     channels = ( "#xkcd-compsci" );
   }
