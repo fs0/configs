@@ -14,6 +14,7 @@ set shiftwidth=4
 set textwidth=1000
 set hlsearch
 set cursorline
+set mouse=a " keep shift pressed to copy
 
 " remember cursor position
 if has("autocmd")
