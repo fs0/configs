@@ -75,7 +75,7 @@ pcm.dmixerSC {
         pcm "soundcard"
         period_time 0
         period_size 1024 # bytes
-        buffer_size 4096 # bytes 
+        buffer_size 8192 # bytes
         rate 44100
         #rate 96000
         #rate 192000
@@ -100,7 +100,7 @@ pcm.dmixerOB {
         pcm "onboard"
         period_time 0
         period_size 1024 # bytes
-        buffer_size 4096 # bytes 
+        buffer_size 8192 # bytes
         rate 44100
         #rate 96000
         #rate 192000
