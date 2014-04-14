@@ -1,0 +1,42 @@
+# Write your default config options here!
+
+dvd-device=/dev/sr0
+cdrom-device=/dev/sr0
+#alang=en
+#slang=en
+nosub=yes
+softvol=0
+
+# use alsa default device
+ao=alsa:device=soundcard
+#ao=alsa:device=default
+channels=6
+
+# video output driver
+vo=gl
+
+# downmixing
+# volume (approx.):
+# 0.707: -3.0 dB
+# 0.595: -4.5 dB
+# 0.500: -6.0 dB
+# 0.354: -9.2 dB
+#
+# 2 channels, FL, FR, RL, RR, C, LFE
+af-add=pan=2:0.707:0:0:0.707:0.354:0:0:0.354:0.5:0.5:0.2:0.2
+
+# Fix for buggy audio drivers/codecs.
+#autosync = 30
+
+# Drop video frames as necessary to keep audio sync.
+framedrop=yes
+hardframedrop=no
+
+# Use a 100MB cache; very large but helps with slow media such as NFS over a crowded network
+cache=102400
+
+# Fill 20% of the cache before starting playback.
+cache-min=25
+
+# Fill 20% of the cache before starting playback again when seeking.
+cache-seek-min=25
