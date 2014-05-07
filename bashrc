@@ -37,6 +37,7 @@ alias mv='mv -vi'
 alias python='python2.7'
 alias mplayerdmix='mplayer -ao alsa:device=both'
 alias xclip='xclip -selection clipboard'
+alias xclip-toPrim='xclip -o | xclip -i -selection primary'
 
 set -o vi
 
