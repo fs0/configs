@@ -1,9 +1,11 @@
 URxvt.scrollBar: off
 URxvt.cursorBlink: true
 
-! clickable links
-URxvt.perl-ext-common:  default,matcher
-URxvt.url-launcher:      firefox
+URxvt.perl-ext-common:  default,matcher,clipboard
+URxvt.keysym.C-C:       perl:clipboard:copy
+URxvt.keysym.C-V:       perl:clipboard:paste
+URxvt.iso14755 :        false
+URxvt.url-launcher:     firefox
 URxvt.matcher.button:   1
 
 ! normal
