@@ -15,6 +15,7 @@ set textwidth=1000
 set hlsearch
 set cursorline
 set mouse=a " keep shift pressed to copy
+set foldmethod=syntax
 
 " remember cursor position
 if has("autocmd")
