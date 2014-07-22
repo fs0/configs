@@ -24,6 +24,8 @@ endif
 
 autocmd FileType make setlocal noexpandtab
 
+let mapleader = ","
+
 call pathogen#infect()
 let g:syntastic_c_checkers=['gcc']
 let g:syntastic_cpp_checkers=['gcc']
@@ -31,3 +33,12 @@ let g:syntastic_python_checkers=['pyflakes']
 let g:syntastic_java_checkers=['javac']
 let g:syntastic_mode_map = {'mode': 'passive',
                            \'active_filetypes': ['c', 'cpp', 'python', 'java']}
+
+filetype plugin indent on
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor = 'latex'
+let g:Tex_DefaultTargetFormat = 'pdf'
+let g:Tex_MultipleCompileFormats='pdf, aux'
+let g:Tex_CompileRule_pdf = 'pdflatex -interaction=nonstopmode $*'
+let g:Tex_ViewRule_pdf = 'mupdf'
+let g:Tex_SmartKeyQuote = 0
