@@ -30,11 +30,10 @@ shopt -s checkwinsize
 alias ls='ls --color=auto'
 alias ll='ls -l'
 alias vi='vim -p'
-alias rm='rm -vi'
-alias srm='mv -vi -t /other/trash/'
+alias rm='mv -vi -t /other/trash/'
 alias cp='cp -vi'
 alias mv='mv -vi'
-alias python='python2.7'
+alias python='python3'
 alias mplayerdmix='mplayer -ao alsa:device=both'
 alias xclip='xclip -selection clipboard'
 
@@ -46,4 +45,5 @@ complete -cf man
 
 export PATH=.:$PATH:/sbin:/home/fs0/prg/shell-scripts:/home/fs0/prg/prgs
 
+export EDITOR=vim
 export BROWSER=firefox
