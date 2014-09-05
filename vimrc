@@ -24,6 +24,9 @@ endif
 
 autocmd FileType make setlocal noexpandtab
 
+" warning, long lines
+let w:m1=matchadd('ErrorMsg', '\%>80v.\+', -1)
+
 let mapleader = ","
 
 call pathogen#infect()
