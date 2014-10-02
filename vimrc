@@ -14,6 +14,7 @@ set shiftwidth=4
 set textwidth=1000
 set hlsearch
 set cursorline
+set cursorcolumn
 set mouse=a " keep shift pressed to copy
 set foldmethod=syntax
 
@@ -22,10 +23,10 @@ if has("autocmd")
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 endif
 
-autocmd FileType make setlocal noexpandtab
+au FileType make setlocal noexpandtab
 
 " warning, long lines
-let w:m1=matchadd('ErrorMsg', '\%>80v.\+', -1)
+au BufWinEnter * let w:m1=matchadd('ErrorMsg', '\%>80v.\+', -1)
 
 let mapleader = ","
 
