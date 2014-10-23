@@ -6,6 +6,7 @@ xrdb -screen -display :0.1 -merge ~/.Xresources1
 nvidia-settings -l
 echo "100,100" > .togglescreen.0
 echo "100,100" > .togglescreen.1
+scim -d
 
 export DISPLAY=:0.1
 conky -c .conkyrc | while read -r; do xsetroot -name "$REPLY"; done &

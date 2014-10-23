@@ -47,3 +47,6 @@ export PATH=.:$PATH:/sbin:/home/fs0/prg/shell-scripts:/home/fs0/prg/prgs
 
 export EDITOR=vim
 export BROWSER=firefox
+export XMODIFIERS='@im=SCIM'
+export GTK_IM_MODULE='scim'
+export QT_IM_MODULE='scim'
