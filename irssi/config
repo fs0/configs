@@ -320,8 +320,8 @@ ignores = (
     channels = ( "#xkcd" );
   },
   {
-    level = "MODES";
-    channels = ( "&bitlbee" );
+    level = "JOINS PARTS QUITS MODES";
+    channels = ( "##math" );
   },
   {
     level = "JOINS PARTS QUITS MODES";
@@ -340,21 +340,3 @@ ignores = (
     channels = ( "#xkcd-compsci" );
   }
 );
-logs = {
-  "~/.irssi/logs/xkcd-compsci-%Y-%m-%d" = {
-    level = "ALL";
-    items = ( { type = "target"; name = "#xkcd-compsci"; } );
-  };
-  "~/.irssi/logs/xkcd-%Y-%m-%d" = {
-    level = "ALL";
-    items = ( { type = "target"; name = "#xkcd"; } );
-  };
-  "~/.irssi/logs/xkcd-signal-%Y-%m-%d" = {
-    level = "ALL";
-    items = ( { type = "target"; name = "#xkcd-signal"; } );
-  };
-  "~/.irssi/logs/icq-%Y-%m-%d" = {
-    level = "ALL";
-    items = ( { type = "target"; name = "&bitlbee"; } );
-  };
-};
