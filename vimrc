@@ -46,3 +46,6 @@ let g:Tex_MultipleCompileFormats='pdf, aux'
 let g:Tex_CompileRule_pdf = 'pdflatex -interaction=nonstopmode $*'
 let g:Tex_ViewRule_pdf = 'mupdf'
 let g:Tex_SmartKeyQuote = 0
+let g:Tex_SmartKeyBS = 0
+let g:Tex_SmartKeyDot = 0
+let g:Imap_FreezeImap=1
