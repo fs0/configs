@@ -31,7 +31,12 @@ servers = (
     port = "6667";
   },
   { address = "irc.webchat.org"; chatnet = "WebChat"; port = "6667"; },
-  { address = "irc.rizon.net"; chatnet = "Rizon"; port = "6667"; },
+  {
+    address = "irc.rizon.net";
+    chatnet = "Rizon";
+    port = "9999";
+    use_ssl = "yes";
+  },
   { address = "irc.link-net.org"; chatnet = "LinkNet"; port = "6667"; },
   { address = "silc.silcnet.org"; chatnet = "SILC"; port = "706"; }
 );
@@ -114,8 +119,8 @@ chatnets = {
     username = "fs0";
     realname = "fs0";
   };
-  newnet = { 
-    type = "IRC"; 
+  newnet = {
+    type = "IRC";
     nick = "seg_fault";
     username = "fs0";
     realname = "fs0";
@@ -309,38 +314,25 @@ settings = {
     autolog = "yes";
     autolog_path = "~/.irssi/logs/$0.%m-%d.log";
   };
+  "irc/dcc" = {
+    dcc_download_path = "/other/downloads";
+    dcc_autoget = "no";
+  };
 };
 ignores = (
   {
     level = "JOINS PARTS QUITS MODES";
     channels = ( "#xkcd-signal" );
   },
-  {
-    level = "JOINS PARTS QUITS MODES";
-    channels = ( "#xkcd" );
-  },
-  {
-    level = "JOINS PARTS QUITS MODES";
-    channels = ( "##math" );
-  },
-  {
-    level = "JOINS PARTS QUITS MODES";
-    channels = ( "##linux" );
-  },
-  {
-    level = "JOINS PARTS QUITS MODES";
-    channels = ( "#archlinux" );
-  },
-  {
-    level = "JOINS PARTS QUITS MODES";
-    channels = ( "#python" );
-  },
-  {
-    level = "JOINS PARTS QUITS MODES";
-    channels = ( "#haskell" );
-  },
+  { level = "JOINS PARTS QUITS MODES"; channels = ( "#xkcd" ); },
+  { level = "JOINS PARTS QUITS MODES"; channels = ( "##math" ); },
+  { level = "JOINS PARTS QUITS MODES"; channels = ( "##linux" ); },
+  { level = "JOINS PARTS QUITS MODES"; channels = ( "#archlinux" ); },
+  { level = "JOINS PARTS QUITS MODES"; channels = ( "#python" ); },
+  { level = "JOINS PARTS QUITS MODES"; channels = ( "#haskell" ); },
   {
     level = "JOINS PARTS QUITS MODES";
     channels = ( "#xkcd-compsci" );
   }
 );
+logs = { };
