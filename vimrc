@@ -17,6 +17,8 @@ set cursorline
 set cursorcolumn
 set mouse=a " keep shift pressed to copy
 set foldmethod=syntax
+set wildmenu
+set wildmode=longest:full,full
 
 " remember cursor position
 if has("autocmd")
@@ -26,7 +28,7 @@ endif
 au FileType make setlocal noexpandtab
 
 " warning, long lines
-au BufWinEnter * let w:m1=matchadd('ErrorMsg', '\%>80v.\+', -1)
+"au BufWinEnter * let w:m1=matchadd('ErrorMsg', '\%>80v.\+', -1)
 
 let mapleader = ","
 
