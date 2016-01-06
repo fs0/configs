@@ -2,14 +2,13 @@
 
 dvd-device=/dev/sr0
 cdrom-device=/dev/sr0
-#alang=en
-#slang=en
+alang=en
+slang=en
 nosub=yes
 softvol=0
 
 # use alsa default device
-ao=alsa:device=soundcard
-#ao=alsa:device=default
+ao=alsa:device=default
 channels=6
 
 # video output driver

@@ -34,7 +34,7 @@ alias rm='mv -vi -t /other/trash/'
 alias cp='cp -vi'
 alias mv='mv -vi'
 alias python='python3'
-alias mplayerdmix='mplayer -ao alsa:device=both'
+alias mplayersc='mplayer -ao alsa:device=soundcard'
 alias xclip='xclip -selection clipboard'
 
 set -o vi
@@ -46,7 +46,7 @@ complete -cf man
 export PATH=.:$PATH:/sbin:/home/fs0/prg/shell-scripts:/home/fs0/prg/prgs
 
 export EDITOR=vim
-export BROWSER=firefox
+export BROWSER=chromium
 export XMODIFIERS='@im=SCIM'
 export GTK_IM_MODULE='scim'
 export QT_IM_MODULE='scim'
