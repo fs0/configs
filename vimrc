@@ -3,6 +3,13 @@ set nocompatible
 
 
 """
+" PATHOGEN
+"""
+call pathogen#infect()
+
+
+
+"""
 " WIN
 """
 if has("win32")
@@ -15,18 +22,14 @@ endif
 
 
 """
-" GUI
-"""
-if has("gui_running")
-    au GUIEnter * simalt ~x
-endif
-
-
-
-"""
 " FONT
 """
-set gfn=Terminus:h12:cANSI
+if has("win32")
+    " set gfn=Terminus:h12:cANSI
+    set gfn=Bitstream_Vera_Sans_Mono:h11:cANSI
+else
+    set gfn=Terminus\ 18
+endif
 
 
 
@@ -68,12 +71,29 @@ set smartcase
 
 
 """
+" GRUVBOX
+"""
+let g:gruvbox_contrast_dark='hard'
+
+
+
+"""
+" LIGHTLINE
+"""
+" needs colorscheme gruvbox below
+" let g:lightline = {'colorscheme': 'gruvbox'}
+
+
+
+"""
 " LOOK
 """
 set nu
+set background=dark
 syntax enable
 set t_Co=256
-colorscheme distinguished
+colorscheme gruvbox
+" colorscheme distinguished
 set cursorline
 set cursorcolumn
 set scrolloff=5
@@ -158,10 +178,7 @@ endif
 " au VimEnter * wincmd p
 
 
-"""
-" LIGHTLINE
-"""
-" let g:lightline = {'colorscheme': 'jellybeans'}
+
 
 
 
@@ -180,13 +197,6 @@ let g:ctrlp_show_hidden=1
 
 
 """
-" PATHOGEN
-"""
-call pathogen#infect()
-
-
-
-"""
 " SYNTASTIC
 """
 let g:syntastic_always_populate_loc_list = 1
@@ -200,6 +210,7 @@ let g:syntastic_java_checkers=['javac']
 " let g:syntastic_javascript_checkers=['jshint']
 let g:syntastic_mode_map = {'mode': 'passive',
                            \'active_filetypes': ['c', 'cpp', 'python', 'java', 'javascript']}
+
 
 
 """
