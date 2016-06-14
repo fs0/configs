@@ -1,3 +1,7 @@
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+
+
+
 set nocompatible
 
 
@@ -17,18 +21,30 @@ if has("win32")
     behave mswin
     " Avoid mswin.vim making Ctrl-v act as paste:
     noremap <C-V> <C-V>
+
+    " set font
+    " set gfn=Terminus:h12:cANSI
+    set gfn=Bitstream_Vera_Sans_Mono:h11:cANSI
+
+    " maximize
+    if has("gui_running")
+        autocmd GUIEnter * simalt ~x
+    endif
+else
+    " set font
+    set gfn=Terminus\ 18
 endif
 
 
 
 """
-" FONT
+" MENUBAR/TOOLBAR
 """
-if has("win32")
-    " set gfn=Terminus:h12:cANSI
-    set gfn=Bitstream_Vera_Sans_Mono:h11:cANSI
-else
-    set gfn=Terminus\ 18
+if has("gui_running")
+    set guioptions-=m  " remove menu bar
+    set guioptions-=T  " remove toolbar
+    set guioptions-=r  " remove right-hand scroll bar
+    set guioptions-=L  " remove left-hand scroll bar
 endif
 
 
