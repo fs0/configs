@@ -97,7 +97,16 @@ let g:gruvbox_contrast_dark='hard'
 " LIGHTLINE
 """
 " needs colorscheme gruvbox below
-" let g:lightline = {'colorscheme': 'gruvbox'}
+let g:lightline           = {'colorscheme': 'gruvbox'}
+let g:lightline.active    = {'left' : [['mode','paste'],
+                                      \['readonly','filename','modified']],
+                            \'right': [['lineinfo'],
+                                      \['percent'],
+                                      \['fileformat','fileencoding','filetype']]}
+let g:lightline.inactive  = {'left' : [['filename','modified']],
+                            \'right': [['lineinfo'],
+                                      \['percent']]}
+let g:lightline.component = {'lineinfo': "%{line('.') . '/' . line('$') . ':' . col('.') }"}
 
 
 
@@ -115,7 +124,7 @@ set cursorcolumn
 set scrolloff=5
 set textwidth=1000
 " warning long lines
-au BufWinEnter * let w:m1=matchadd('ErrorMsg', '\%>100v.\+', -1)
+" au BufWinEnter * let w:m1=matchadd('ErrorMsg', '\%>100v.\+', -1)
 
 
 
