@@ -83,6 +83,8 @@ set incsearch
 set hlsearch
 set ignorecase
 set smartcase
+" use // to search for visual selection
+vnoremap // y/\V<C-R>=escape(@", '\/')<CR><CR>
 
 
 
