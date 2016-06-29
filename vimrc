@@ -92,6 +92,7 @@ vnoremap // y/\V<C-R>=escape(@", '\/')<CR><CR>
 " GRUVBOX
 """
 let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_italic=0
 
 
 
