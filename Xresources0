@@ -5,7 +5,7 @@ URxvt.perl-ext-common:  default,matcher,clipboard
 URxvt.keysym.C-C:       perl:clipboard:copy
 URxvt.keysym.C-V:       perl:clipboard:paste
 URxvt.iso14755 :        false
-URxvt.url-launcher:     firefox
+URxvt.url-launcher:     chromium
 URxvt.matcher.button:   1
 
 ! normal
@@ -51,7 +51,7 @@ URxvt.colorUL:#00e821
 URxvt.font: xft:Terminus:size=14
 
 URxvt.transparent: true
-URxvt.tintColor:#2a2a2a
-!URxvt.shading: 9.5
+URxvt.tintColor:#0a0a0a
+!URxvt.shading:9.5
 
 URxvt.borderLess: false

@@ -1,17 +1,31 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const char font[]            = "-*-terminus-medium-r-*-*-12-*-*-*-*-*-*-*";
+static const char *fonts[] = {
+    "Terminus:size=9.5",
+};
+//static const char dmenufont[] = "-*-terminus-medium-r-*-*-8-*-*-*-*-*-*-*";
+static const char dmenufont[]       = "monospace:size=10";
 static const char normbordercolor[] = "#000000";
 static const char normbgcolor[]     = "#000000";
 static const char normfgcolor[]     = "#a0a0a0";
 static const char selbordercolor[]  = "#b00000";
 static const char selbgcolor[]      = "#000000";
 static const char selfgcolor[]      = "#ffffff";
+static const char col_gray1[]       = "#222222";
+static const char col_gray2[]       = "#444444";
+static const char col_gray3[]       = "#bbbbbb";
+static const char col_gray4[]       = "#eeeeee";
+static const char col_cyan[]        = "#005577";
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const Bool showbar           = True;     /* False means no bar */
 static const Bool topbar            = True;     /* False means bottom bar */
+static const char *colors[SchemeLast][3]      = {
+	/*               fg         bg         border   */
+	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
+	[SchemeSel] =  { col_gray4, col_cyan,  col_cyan  },
+};
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
@@ -29,7 +43,7 @@ static const Rule rules[] = {
 /* layout(s) */
 static const float mfact      = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster      = 1;    /* number of clients in master area */
-static const Bool resizehints = False; /* True means respect size hints in tiled resizals */
+static const int resizehints  = 0; /* 1 means respect size hints in tiled resizals */
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
@@ -51,11 +65,12 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[]  = { "urxvt", NULL };
 
 //static const char *<name>[] = {"<command>", "<flags>", "<arguments>", NULL};
-static const char *firefox[] = {"firefox", "-p", NULL};
+static const char *chromium[] = {"chromium", NULL};
+static const char *chromium2[] = {"chromium", "--user-data-dir=/home/fs0/.config/chromium2", "--incognito", NULL};
 static const char *raiseVol[] = {"raiseVolume",NULL};
 static const char *lowerVol[] = {"lowerVolume", NULL};
 static const char *screenOff[] = {"slock", NULL};
@@ -97,9 +112,10 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 
-	{ MODKEY,                       XK_p,      spawn,          {.v = firefox } },
+	{ MODKEY,                       XK_p,      spawn,          {.v = chromium } },
+	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = chromium2 } },
 	{ MODKEY,                       XK_u,      spawn,          {.v = raiseVol } },
-	{ MODKEY,                       XK_y,      spawn,          {.v = lowerVol } },
+	{ MODKEY,                       XK_z,      spawn,          {.v = lowerVol } },
 	{ MODKEY,                       XK_q,      spawn,          {.v = screenOff } },
 	{ MODKEY,                       XK_n,      spawn,          {.v = switchscreen } },
 };

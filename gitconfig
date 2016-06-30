@@ -1,9 +1,10 @@
 [user]
-	name = fs0 
-	email = schumacherf89@gmail.com
+    name = fs0
+    email= schumacherf89@gmail.com
 
 [alias]
 lg1 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(bold white)— %an%C(reset)' --abbrev-commit
 lg2 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
 lg3 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar) %C(reset)%C(bold yellow)%d%C(reset)%C(bold white) - %an %C(reset)%n%C(white)%B%C(reset)' --abbrev-commit --date=relative
 lg4 = log --graph --all --format=format:'%h: %ai %d %n%B' --abbrev-commit
+lg = !"git lg3"

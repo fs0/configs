@@ -23,8 +23,7 @@ if has("win32")
     noremap <C-V> <C-V>
 
     " set font
-    " set gfn=Terminus:h12:cANSI
-    set gfn=Bitstream_Vera_Sans_Mono:h11:cANSI
+    set gfn=Terminus:h8:cANSI
 
     " maximize
     if has("gui_running")
@@ -32,7 +31,7 @@ if has("win32")
     endif
 else
     " set font
-    set gfn=Terminus\ 18
+    set gfn=Terminus\ 14
 endif
 
 
