@@ -146,7 +146,10 @@ au FileType make setlocal noexpandtab
 """
 " FOLD
 """
-set foldmethod=syntax
+set foldmethod=indent
+set foldignore=
+" open all folds
+au BufRead * normal zR
 
 
 
