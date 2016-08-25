@@ -162,6 +162,14 @@ set wildmode=longest:full,full
 
 
 """
+" NERDCOMMENTER
+"""
+let g:NERDDefaultAlign     = 'left'
+let g:NERDCustomDelimiters = {'JavaScript': { 'left': '/*', 'marker': '*', 'right': '*/'}}
+
+
+
+"""
 " ENCODING
 """
 set encoding=utf8
@@ -230,16 +238,16 @@ let g:ctrlp_show_hidden=1
 " SYNTASTIC
 """
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_c_checkers=['gcc']
-let g:syntastic_cpp_checkers=['gcc']
-let g:syntastic_python_checkers=['python']
-let g:syntastic_java_checkers=['javac']
-" let g:syntastic_javascript_checkers=['jshint']
-let g:syntastic_mode_map = {'mode': 'passive',
-                           \'active_filetypes': ['c', 'cpp', 'python', 'java', 'javascript']}
+let g:syntastic_auto_loc_list            = 1
+let g:syntastic_check_on_open            = 1
+let g:syntastic_check_on_wq              = 0
+let g:syntastic_c_checkers               = ['gcc']
+let g:syntastic_cpp_checkers             = ['gcc']
+let g:syntastic_python_checkers          = ['python']
+let g:syntastic_java_checkers            = ['javac']
+" let g:syntastic_javascript_checkers      = ['jshint']
+let g:syntastic_mode_map                 = {'mode': 'passive',
+  \'active_filetypes': ['c', 'cpp', 'python', 'java', 'javascript']}
 
 
 
@@ -248,12 +256,12 @@ let g:syntastic_mode_map = {'mode': 'passive',
 """
 filetype plugin indent on
 set grepprg=grep\ -nH\ $*
-let g:tex_flavor = 'latex'
-let g:Tex_DefaultTargetFormat = 'pdf'
-let g:Tex_MultipleCompileFormats='pdf, aux'
-let g:Tex_CompileRule_pdf = 'pdflatex -interaction=nonstopmode $*'
-let g:Tex_ViewRule_pdf = 'mupdf'
-let g:Tex_SmartKeyQuote = 0
-let g:Tex_SmartKeyBS = 0
-let g:Tex_SmartKeyDot = 0
-let g:Imap_FreezeImap=1
+let g:tex_flavor                 = 'latex'
+let g:Tex_DefaultTargetFormat    = 'pdf'
+let g:Tex_MultipleCompileFormats = 'pdf, aux'
+let g:Tex_CompileRule_pdf        = 'pdflatex -interaction=nonstopmode $*'
+let g:Tex_ViewRule_pdf           = 'mupdf'
+let g:Tex_SmartKeyQuote          = 0
+let g:Tex_SmartKeyBS             = 0
+let g:Tex_SmartKeyDot            = 0
+let g:Imap_FreezeImap            = 1
