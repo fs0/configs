@@ -48,7 +48,7 @@ URxvt.color12:#395bf1
 !URxvt.color15:#dbdbdb
 URxvt.colorUL:#00e821
 
-URxvt.font: xft:Terminus:size=14
+URxvt.font: xft:xos4 Terminus:size=14
 
 URxvt.transparent: true
 URxvt.tintColor:#0a0a0a
